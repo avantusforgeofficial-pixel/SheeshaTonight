@@ -1,0 +1,32 @@
+{
+  "name": "sheesha-tonight",
+  "version": "1.0.0",
+  "description": "Premium multi-vendor rental marketplace platform (UAE market)",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "db:push": "cd packages/backend && npx prisma db push",
+    "db:generate": "cd packages/backend && npx prisma generate",
+    "db:studio": "cd packages/backend && npx prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "prettier": "^3.1.0",
+    "turbo": "^1.10.16",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  }
+}
